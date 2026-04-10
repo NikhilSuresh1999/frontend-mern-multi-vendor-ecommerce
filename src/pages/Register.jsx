@@ -53,7 +53,7 @@ const Register = () => {
             navigate('/')
         }
        
-    },[successMessage,errorMessage,userInfo])
+    },[successMessage,errorMessage,userInfo,dispatch])
 
 
   return (

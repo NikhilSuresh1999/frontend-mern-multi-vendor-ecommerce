@@ -27,8 +27,8 @@ const Details = () => {
   const navigate = useNavigate()
   const [image, setImage] = useState('')
    const {product,relatedProducts,moreProducts} = useSelector(state => state.home)
-    const discount = 10
-    const stock = 3
+    //const discount = 10
+    //const stock = 3
     const [state, setState] = useState('reviews')
     const {userInfo } = useSelector(state => state.auth)
     const {errorMessage,successMessage } = useSelector(state => state.cart)
@@ -38,7 +38,7 @@ const Details = () => {
 
     useEffect(() => {
         dispatch(product_details(slug))
-    },[slug])
+    },[slug,dispatch])
 
      useEffect(() => { 
         if (successMessage) {
@@ -50,7 +50,7 @@ const Details = () => {
             dispatch(messageClear())  
         } 
         
-    },[successMessage,errorMessage])
+    },[successMessage,errorMessage,dispatch])
 
   const responsive = {
         superLargeDesktop: {

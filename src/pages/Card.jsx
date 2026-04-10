@@ -30,7 +30,7 @@ const Card = () => {
 
   useEffect(() => {
         dispatch(get_cart_products(userInfo.id))
-    },[])
+    },[dispatch,userInfo.id])
 
 
     useEffect(() => { 
@@ -40,7 +40,7 @@ const Card = () => {
             dispatch(get_cart_products(userInfo.id))
         } 
         
-    },[successMessage])
+    },[userInfo.id,successMessage,dispatch])
 
     const inc = (quantity,stock,cart_id)=>{
       const temp = quantity + 1

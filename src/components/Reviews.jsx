@@ -50,7 +50,7 @@ const Reviews = ({product}) => {
             setRe('')
             dispatch(messageClear())
         }  
-    },[successMessage])
+    },[successMessage,dispatch])
 
     useEffect(() => {
         if (product._id) {
@@ -59,7 +59,7 @@ const Reviews = ({product}) => {
                 pageNumber
             }))
         }
-    },[pageNumber,product])
+    },[pageNumber,product,dispatch])
 
 
   return (

@@ -36,7 +36,7 @@ const CategoryShop = () => {
   const {products,categorys,priceRange,latest_product,totalProduct,parPage} = useSelector(state => state.home)
   useEffect(() => { 
         dispatch(price_range_product())
-    },[])
+    },[dispatch])
     useEffect(() => { 
         setState({
             values: [priceRange.low, priceRange.high]
@@ -68,7 +68,7 @@ const CategoryShop = () => {
                 parPage
             })
          )
-    },[state.values[0],state.values[1],category,rating,sortPrice,pageNumber,parPage])
+    },[state.values[0],state.values[1],category,rating,sortPrice,pageNumber,parPage,dispatch])
 
     const resetRating = () =>{
       setRating('')
