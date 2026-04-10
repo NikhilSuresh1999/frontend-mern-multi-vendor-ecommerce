@@ -39,7 +39,7 @@ const Shops = () => {
         setState({
             values: [priceRange.low, priceRange.high]
         })
-    },[priceRange])
+    },[priceRange,dispatch])
 
   
 
@@ -78,7 +78,7 @@ const Shops = () => {
                 parPage
             })
          )
-    },[state.values[0],state.values[1],category,rating,sortPrice,pageNumber,parPage])
+    },[state.values[0],state.values[1],category,rating,sortPrice,pageNumber,parPage,dispatch])
 
     const resetRating = () =>{
       setRating('')

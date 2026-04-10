@@ -32,7 +32,7 @@ const SearchProducts = () => {
         setState({
             values: [priceRange.low, priceRange.high]
         })
-    },[priceRange])
+    },[priceRange,dispatch])
 
   
 
@@ -60,7 +60,7 @@ const SearchProducts = () => {
                 searchValue
             })
          )
-    },[state.values[0],state.values[1],category,rating,sortPrice,pageNumber,parPage,searchValue])
+    },[state.values[0],state.values[1],category,rating,sortPrice,pageNumber,parPage,searchValue,dispatch])
 
     const resetRating = () =>{
       setRating('')
